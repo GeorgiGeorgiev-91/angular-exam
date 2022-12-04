@@ -1,0 +1,51 @@
+<header>
+  <div class="mini-navbar-wrap">
+    <div class="logo-wrap">
+
+    </div>
+    <p class="logo"><span class="logo"><img src="../../../assets/cookbook_logo.png"></span></p>
+    <nav>
+      <ul>
+        <li>
+          <a routerLink="#">Home</a>
+        </li>
+        <li>
+          <a routerLink="#">Recipes</a>
+        </li>
+        <li>
+          <a routerLink="#">New Recipe</a>
+        </li>
+      </ul>
+      <!-- <p class="notification error-message">{{ "Error message" }}</p> -->
+    </nav>
+    <div class="mini-navbar">
+      <ng-template #loggedOutTemplate>
+        <ul>
+          <li>
+            <a routerLink="/auth/login">Login</a>
+          </li>
+          <li>
+            <a routerLink="/auth/register">Register</a>
+          </li>
+        </ul>
+      </ng-template>
+
+      <ng-template #loggedInTemplate>
+        <ul>
+          <li>
+            <a routerLink="/auth/profile">Profile</a>
+          </li>
+          <li>
+            <a routerLink="/auth/logout">Logout</a>
+          </li>
+        </ul>
+      </ng-template>
+
+      <ng-container
+        *ngTemplateOutlet="isLogged ? loggedInTemplate : loggedOutTemplate"
+      >
+      </ng-container>
+    </div>
+  </div>
+
+</header>
