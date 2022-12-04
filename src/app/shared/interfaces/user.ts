@@ -1,11 +1,14 @@
 export interface IUser {
-  recipes: string[],
-  posts: string[],
-  _id: string,
+  // _id: string,
   email: string,
-  username: string,
-  password: string,
-  created_at: string,
-  updatedAt: string,
-  __v: number
+  personName: string,
+  // password: string,
+  // tel: string,
+  // city: string,
+  // sex: string,
+  // recipes: string[],
+  // posts: string[],
+  // created_at: string,
+  // updatedAt: string,
+  // __v: number
 }

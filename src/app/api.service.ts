@@ -16,6 +16,10 @@ export class ApiService {
     return this.httpClient.get<IRecipe[]>(`${apiURL}/recipes`)
   }
 
+  loadTopRecipes(){
+    return this.httpClient.get<IRecipe[]>(`${apiURL}/recipes/top`)
+  }
+
   loadRecipe(id: number){
     return this.httpClient.get<IRecipe>(`${apiURL}/recipes/${id}`);
   }

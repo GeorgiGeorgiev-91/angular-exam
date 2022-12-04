@@ -1,4 +1,10 @@
 /* recipe list item */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
 .recipe-container {
   display: inline-grid;
   // grid-template-columns: repeat(3, 1fr);

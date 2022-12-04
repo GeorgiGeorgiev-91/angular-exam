@@ -9,5 +9,6 @@ export interface IRecipe {
   recipeName: string,
   comments: string[],
   likes: string[],
+  likesCount: number;
   imgUrl: string
 }

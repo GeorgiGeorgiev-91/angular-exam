@@ -1,18 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RecipeComponent } from './recipe/recipe.component';
-import { SharedModule } from './shared/shared.module';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
 
+import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
+import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
+import { AuthRoutingModule } from './auth/auth-routing.module';
+import { RecipeModule } from './recipe/recipe.module';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RecipeComponent
+    LoginComponent,
+    RegisterComponent,
+    HomeComponent
   ],
   imports: [
     CommonModule,
@@ -20,7 +25,8 @@ import { CoreModule } from './core/core.module';
     BrowserModule,
     AppRoutingModule,
     CoreModule,
-    HttpClientModule
+    AuthRoutingModule,
+    RecipeModule
   ],
   providers: [
   ],
